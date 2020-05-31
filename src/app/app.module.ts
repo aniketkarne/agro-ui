@@ -13,6 +13,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
+import { BsDropdownModule} from 'ngx-bootstrap/dropdown';
+import {AlertModule} from 'ngx-bootstrap/alert';
+// RECOMMENDED
+// import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+// import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 @NgModule({
   imports: [
@@ -23,7 +28,10 @@ import { ComponentsModule } from './components/components.module';
     NgbModule,
     RouterModule,
     AppRoutingModule,
-    ToastrModule.forRoot()
+    BsDropdownModule,
+    AlertModule,
+    ToastrModule.forRoot(),
+    NgbModule.forRoot()
   ],
   declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent],
   providers: [],

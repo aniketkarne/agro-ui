@@ -17,6 +17,7 @@ import { TypographyComponent } from '../../pages/typography/typography.component
 // import { RtlComponent } from '../../pages/rtl/rtl.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {CropAdvisoryComponent} from "../../pages/crop-advisory/crop-advisory.component";
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DashboardComponent,
     UserComponent,
     UserDetailsComponent,
+    CropAdvisoryComponent,
     TablesComponent,
     IconsComponent,
     TypographyComponent,

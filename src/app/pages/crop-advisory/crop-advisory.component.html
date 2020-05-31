@@ -1,0 +1,181 @@
+
+<div class="content">
+  <h2>Insurance Information Portal</h2>
+  <!-- Nav pills -->
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="pill" href="#home">Crop Suitability</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu1">Crop Trend</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu2">Crop Prediction</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu2">Know Your Crop</a>
+    </li>
+  </ul>
+<br>
+  <br>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane container active" id="home">
+
+      <div class="row">
+
+        <div class=" col-md-3">
+          <div class="card-container">
+            <label>District</label>
+            <br>
+            <select placeholder="Scheme" (change)="changeScheme($event.target.value)">
+              <option>District</option>
+              <option *ngFor="let Scheme of schemes">{{Scheme.name}}</option>
+            </select>
+          </div>
+
+        </div>
+        <div class=" col-md-3">
+
+          <div class="card-container">
+            <label>Tehsil</label>
+            <br>
+            <select placeholder="State" (change)="changeState($event.target.value)">
+              <option>Tehsil</option>
+              <option *ngFor="let state of states">{{state.name}}</option>
+            </select>
+          </div>
+
+        </div>
+        <div class=" col-md-3">
+
+          <div class="card-container">
+            <label>Village </label>
+            <br>
+            <select placeholder="City" (change)="changeState($event.target.value)">
+              <option>Village</option>
+              <option *ngFor="let city of cities">{{city}}</option>
+            </select>
+          </div>
+
+        </div>
+        <div class=" col-md-3">
+
+          <div class="card-container">
+            <label>Soil Type </label>
+            <br>
+            <select placeholder="City">
+              <option>Soil Type</option>
+              <option *ngFor="let city of cities">{{city}}</option>
+            </select>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="tab-pane container fade" id="menu1">
+
+      <div class="row">
+
+        <div class=" col-md-3">
+          <div class="card-container">
+            <label>Scheme Broad Interest Area</label>
+            <select placeholder="Scheme" [(ngModel)]="selectedscheme" (change)="changeScheme($event.target.value)">
+              <option>--Choose scheme Area--</option>
+              <option *ngFor="let Scheme of schemes">{{Scheme.name}}</option>
+            </select>
+          </div>
+
+        </div>
+        <div class=" col-md-3">
+
+          <div class="card-container">
+            <label>Domain Name</label>
+            <select placeholder="State" (change)="changeState($event.target.value)">
+              <option>--Choose domain area--</option>
+              <option *ngFor="let state of states">{{state.name}}</option>
+            </select>
+          </div>
+
+        </div>
+        <div class=" col-md-3">
+
+          <div class="card-container">
+            <label>Sub-domain </label>
+            <select placeholder="City">
+              <option>--Choose sub-domain area--</option>
+              <option *ngFor="let city of cities">{{city}}</option>
+            </select>
+          </div>
+
+        </div>
+        <div class=" col-md-3">
+
+          <div class="card-container">
+            <label>Sub-domain </label>
+            <select placeholder="City">
+              <option>--Choose sub-domain area--</option>
+              <option *ngFor="let city of cities">{{city}}</option>
+            </select>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="tab-pane container fade" id="menu2">
+
+      <div class="row">
+
+        <div class=" col-md-3">
+          <div class="card-container">
+            <label>Scheme Broad Interest Area</label>
+            <select placeholder="Scheme" [(ngModel)]="selectedscheme" (change)="changeScheme($event.target.value)">
+              <option>--Choose scheme Area--</option>
+              <option *ngFor="let Scheme of schemes">{{Scheme.name}}</option>
+            </select>
+          </div>
+
+        </div>
+        <div class=" col-md-3">
+
+          <div class="card-container">
+            <label>Domain Name</label>
+            <select placeholder="State" (change)="changeState($event.target.value)">
+              <option>--Choose domain area--</option>
+              <option *ngFor="let state of states">{{state.name}}</option>
+            </select>
+          </div>
+
+        </div>
+        <div class=" col-md-3">
+
+          <div class="card-container">
+            <label>Sub-domain </label>
+            <select placeholder="City">
+              <option>--Choose sub-domain area--</option>
+              <option *ngFor="let city of cities">{{city}}</option>
+            </select>
+          </div>
+
+        </div>
+        <div class=" col-md-3">
+
+          <div class="card-container">
+            <label>Sub-domain </label>
+            <select placeholder="City">
+              <option>--Choose sub-domain area--</option>
+              <option *ngFor="let city of cities">{{city}}</option>
+            </select>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

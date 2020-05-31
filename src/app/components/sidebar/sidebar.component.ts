@@ -23,6 +23,13 @@ export const ROUTES: RouteInfo[] = [
     class: ''
   },
   {
+    path: '/crop-advisory',
+    title: 'Crop Advisory',
+    rtlTitle: '',
+    icon: 'icon-single-02',
+    class: ''
+  },
+  {
     path: '/icons',
     title: 'Crop Informatics',
     rtlTitle: '',

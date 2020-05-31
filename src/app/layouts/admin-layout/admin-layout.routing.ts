@@ -8,6 +8,7 @@ import { UserComponent } from '../../pages/user/user.component';
 import { TablesComponent } from '../../pages/tables/tables.component';
 import { TypographyComponent } from '../../pages/typography/typography.component';
 import { UserDetailsComponent } from '../../pages/user-details/user-details.component';
+import {CropAdvisoryComponent} from "../../pages/crop-advisory/crop-advisory.component";
 
 // import { RtlComponent } from '../../pages/rtl/rtl.component';
 
@@ -18,6 +19,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: 'notifications', component: NotificationsComponent },
   { path: 'user', component: UserComponent },
    { path: 'user-details', component: UserDetailsComponent },
+  { path: 'crop-advisory', component: CropAdvisoryComponent },
   { path: 'tables', component: TablesComponent },
   { path: 'typography', component: TypographyComponent },
   // { path: 'rtl', component: RtlComponent }
