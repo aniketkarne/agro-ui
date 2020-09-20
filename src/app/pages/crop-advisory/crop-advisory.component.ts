@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import * as L from "leaflet";
+import { Layer, tileLayer, geoJSON, LayerOptions } from 'leaflet';
+import 'leaflet-providers';
+
 
 @Component({
   selector: 'app-user-details',
@@ -8,7 +13,34 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class CropAdvisoryComponent implements OnInit {
-  ngOnInit() {}
+  constructor(private http: HttpClient) {}
+
+
+  map: L.Map;
+  json;
+  options = {
+    layers: [
+      L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: ""
+      })
+    ],
+    zoom: 8,
+    center: L.latLng(18.5074213, 73.7871499)
+  };
+  ngOnInit() {
+
+  }
+
+  onMapReady(map: L.Map) {
+    this.http.get("assets/pune.geojson").subscribe((json: any) => {
+      console.log(json);
+      this.json = json;
+      L.geoJSON(this.json).addTo(map);
+    });
+  }
+
+
 // tslint:disable-next-line:member-ordering
   selectedscheme = 'District';
   // tslint:disable-next-line:member-ordering
@@ -30,6 +62,12 @@ export class CropAdvisoryComponent implements OnInit {
   }
   changeState(state) {
     this.cities = this.schemes.find(cntry => cntry.name === this.selectedscheme).states.find(stat => stat.name === state).cities;
+  }
+
+  loadMap()
+  {
+    alert("here");
+    //this.onMapReady();
   }
 }
 

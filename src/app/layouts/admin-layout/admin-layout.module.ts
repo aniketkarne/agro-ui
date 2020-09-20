@@ -18,6 +18,7 @@ import { TypographyComponent } from '../../pages/typography/typography.component
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {CropAdvisoryComponent} from "../../pages/crop-advisory/crop-advisory.component";
+import {LeafletModule} from "@asymmetrik/ngx-leaflet";
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import {CropAdvisoryComponent} from "../../pages/crop-advisory/crop-advisory.com
     FormsModule,
     HttpClientModule,
     NgbModule,
+    LeafletModule,
   ],
   declarations: [
     DashboardComponent,

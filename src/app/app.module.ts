@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
 import { BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {AlertModule} from 'ngx-bootstrap/alert';
+import {LeafletModule} from "@asymmetrik/ngx-leaflet";
 // RECOMMENDED
 // import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 // import { ButtonsModule } from 'ngx-bootstrap/buttons';
@@ -30,6 +31,7 @@ import {AlertModule} from 'ngx-bootstrap/alert';
     AppRoutingModule,
     BsDropdownModule,
     AlertModule,
+    LeafletModule,
     ToastrModule.forRoot(),
     NgbModule.forRoot()
   ],
