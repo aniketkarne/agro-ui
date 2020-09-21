@@ -13,6 +13,7 @@ import 'leaflet-providers';
 
 
 export class CropAdvisoryComponent implements OnInit {
+  private url: string = "assets/pune.geojson";
   constructor(private http: HttpClient) {}
 
 
@@ -33,10 +34,11 @@ export class CropAdvisoryComponent implements OnInit {
   }
 
   onMapReady(map: L.Map) {
-    this.http.get("assets/pune.geojson").subscribe((json: any) => {
+    this.http.get(this.url).subscribe((json: any) => {
       console.log(json);
       this.json = json;
       L.geoJSON(this.json).addTo(map);
+      this.map = map;
     });
   }
 
@@ -68,6 +70,14 @@ export class CropAdvisoryComponent implements OnInit {
   {
     this.toggleShow = true;
   }
+
+  showMap(url)
+  {
+    this.toggleShow = false;
+    this.url = url;
+    this.onMapReady(this.map);
+  }
+
 
   loadMap()
   {

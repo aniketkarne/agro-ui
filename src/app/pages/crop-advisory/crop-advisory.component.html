@@ -4,16 +4,16 @@
   <!-- Nav pills -->
   <ul class="nav nav-pills">
     <li class="nav-item">
-      <a class="nav-link active" data-toggle="pill" href="#home">Crop Suitability</a>
+      <a class="nav-link active" data-toggle="pill" href="#home" (click)="showMap('assets/pune.geojson')">Crop Suitability</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#menu1">Crop Trend</a>
+      <a class="nav-link" data-toggle="pill" href="#menu1" (click)="showMap('assets/mumbai.geojson')">Crop Trend</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#menu2">Crop Prediction</a>
+      <a class="nav-link" data-toggle="pill" href="#menu2" (click)="showMap('assets/goa.geojson')" >Crop Prediction</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#menu2">Know Your Crop</a>
+      <a class="nav-link" data-toggle="pill" href="#menu2" (click)="showMap('assets/else.geojson')">Know Your Crop</a>
     </li>
   </ul>
 <br>
@@ -75,25 +75,25 @@
 
 
       </div>
-      <div class="row justify-content-center"  style="margin-top:3%">
-        <div class=" col-md-3">
+<!--      <div class="row justify-content-center"  style="margin-top:3%">-->
+<!--        <div class=" col-md-3">-->
 
-          <div class="card-container">
-            <button (click)="showHideMap()">Submit</button>
-          </div>
+<!--          <div class="card-container">-->
+<!--            <button (click)="showHideMap()">Submit</button>-->
+<!--          </div>-->
 
-        </div>
-      </div>
-      <div class="col-lg-12">
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col-lg-12">-->
 
-        <div *ngIf="toggleShow == true"
-          leaflet
-          style="height: 600px"
+<!--        <div *ngIf="toggleShow == true"-->
+<!--          leaflet-->
+<!--          style="height: 600px"-->
 
-          [leafletOptions]="options"
-          (leafletMapReady)="onMapReady($event)"
-        ></div>
-      </div>
+<!--          [leafletOptions]="options"-->
+<!--          (leafletMapReady)="onMapReady($event)"-->
+<!--        ></div>-->
+<!--      </div>-->
 
     </div>
     <div class="tab-pane container fade" id="menu1">
@@ -144,7 +144,11 @@
 
         </div>
 
+
+
       </div>
+
+
 
     </div>
     <div class="tab-pane container fade" id="menu2">
@@ -199,7 +203,25 @@
 
     </div>
   </div>
+  <div class="row justify-content-center"  style="margin-top:3%">
+    <div class=" col-md-3">
 
+      <div class="card-container">
+        <button (click)="showHideMap()">Submit</button>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-lg-12">
+
+    <div *ngIf="toggleShow == true"
+         leaflet
+         style="height: 600px"
+
+         [leafletOptions]="options"
+         (leafletMapReady)="onMapReady($event)"
+    ></div>
+  </div>
 </div>
 
 
