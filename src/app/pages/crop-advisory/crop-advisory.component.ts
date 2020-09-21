@@ -63,6 +63,11 @@ export class CropAdvisoryComponent implements OnInit {
   changeState(state) {
     this.cities = this.schemes.find(cntry => cntry.name === this.selectedscheme).states.find(stat => stat.name === state).cities;
   }
+  toggleShow = false;
+  showHideMap()
+  {
+    this.toggleShow = true;
+  }
 
   loadMap()
   {
